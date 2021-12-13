@@ -129,4 +129,4 @@ COMMIT;
   ![image](https://user-images.githubusercontent.com/71700079/144845325-7e955995-29e7-461c-a119-56dcf7f43bc0.png)  
 
   - Inconsistent Analysis Problem  
-  ![image](https://user-images.githubusercontent.com/71700079/144845351-50f8d0a2-0836-4bde-b253-0bda0f9f7222.png) 
+  ![image](https://user-images.githubusercontent.com/71700079/144845351-50f8d0a2-0836-4bde-b253-0bda0f9f7222.png)  
