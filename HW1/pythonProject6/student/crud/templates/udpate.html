@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container mt-3">
+  <h4>Update Record</h4>
+  <hr>
+  <form action="/update/{{students.id}}" method="POST">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="">ID</label>
+      <input type="text" name="sid" value="{{students.sid}}" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">Firstname</label>
+      <input type="text" name="sfirstname" value="{{students.sfirstname}}" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">Secondname</label>
+      <input type="text" name="ssecondname" value="{{students.ssecondname}}" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">Age</label>
+      <input type="text" name="sage" value="{{students.sage}}" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">Major</label>
+      <input type="text" name="smajor" value="{{students.smajor}}" class="form-control">
+    </div>
+    <div class="form-group">
+      <label for="">Address</label>
+      <input type="text" name="saddress" value="{{students.saddress}}" class="form-control">
+    </div>
+    <div class="form-group">
+      <button class="btn btn-primary" type="submit">Update Record</button>
+      <a href="{% url 'show' %}" class="btn btn-info">Show Students</a>
+    </div>
+  </form>
+
+</div>
+
+{% endblock content %}

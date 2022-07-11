@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container mt-3">
+  <h4>Students</h4>
+  <a href="{% url 'add' %}" class="btn btn-sm btn-info">Add new</a>
+  <hr>
+  <table class="table">
+      <thead>
+      <tr>
+          <th>Id</th>
+          <th>Firstname</th>
+          <th>Secondname</th>
+          <th>Age</th>
+          <th>Major</th>
+          <th>Address</th>
+          <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+        {% for s in student %}
+        <tr>
+            <td>{{ s.sid }}</td>
+            <td>{{ s.sfirstname }}</td>
+            <td>{{ s.ssecondname }}</td>
+            <td>{{ s.sage }}</td>
+            <td>{{ s.smajor }}</td>
+            <td>{{ s.saddress }}</td>
+            <td>
+                <a href="admin/crud/students/{{s.sid}}/change/" class="btn btn-sm btn-info">Edit</a>
+                <a href="admin/crud/students/{{s.sid}}/delete/" class="btn btn-sm btn-danger">Delete</a>
+            <!--
+                <a href="update/{{ s.id }}" class="btn btn-sm btn-info">Edit</a>
+                <a href="delete/{{ s.id }}" class="btn btn-sm btn-danger">Delete</a>
+            -->
+            </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+  </table>
+  <a href="{% url 'deleteAll' %}" class="btn btn-sm btn-info">Delete All</a>
+</div>
+
+{% endblock content %}
