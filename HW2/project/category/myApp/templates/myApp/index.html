@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>201724605 최재원</title>
+    <h3>201724605 assign2</h3>
+</head>
+<body align="center">
+<h3>Students</h3>
+<details><summary>Click to open Students table</summary>
+<table border="1" width="600px" align="center">
+    <thead>
+        <tr bgcolor="skyblue" align ="center" >
+        <!--
+        <th>category id</th>
+        <th>category name</th>
+        <th>category description</th>
+        -->
+        <th>student id</th>
+        <th>student name</th>
+        <th>student score</th>
+        <th>student county</th>
+    </tr>
+    </thead>
+{% for students in Students %}
+    <tr align ="right">
+        <td>{{ students.studentId }}</td>
+        <td>{{ students.name }}</td>
+        <td>{{ students.score }}</td>
+        <td>{{ students.county }}</td>
+    </tr>
+{% endfor %}
+</table></details>
+<br>
+<hr>
+
+<h3>Professors</h3>
+<details><summary>Click to open Professors table</summary>
+<table border="1" width="600px" align="center">
+    <thead>
+        <tr bgcolor="skyblue" align ="center">
+        <!--
+        <th>category id</th>
+        <th>category name</th>
+        <th>category description</th>
+        -->
+        <th>professor facultyid</th>
+        <th>professor name</th>
+        <th>professor age</th>
+        <th>professor county</th>
+    </tr>
+    </thead>
+{% for professors in Professors %}
+    <tr align ="right">
+        <td>{{ professors.facultyId }}</td>
+        <td>{{ professors.name }}</td>
+        <td>{{ professors.age }}</td>
+        <td>{{ professors.county }}</td>
+    </tr>
+{% endfor %}
+</table></details>
+<br>
+<hr>
+
+<h3>Counties</h3>
+<details><summary>Click to open Counties table</summary>
+<table border="1" width="600px" align="center">
+    <thead>
+        <tr bgcolor="skyblue" align ="center">
+        <!--
+        <th>category id</th>
+        <th>category name</th>
+        <th>category description</th>
+        -->
+        <th>county name</th>
+        <th>county population</th>
+        <th>county city</th>
+    </tr>
+    </thead>
+{% for counties in Counties %}
+    <tr align ="right">
+        <td>{{ counties.countyName }}</td>
+        <td>{{ counties.population }}</td>
+        <td>{{ counties.city }}</td>
+    </tr>
+{% endfor %}
+</table></details>
+<br>
+<hr>
+
+<h3>COVID</h3>
+<details><summary>Click to open COVID table</summary>
+<table border="1" width="600px" align="center">
+    <thead>
+        <tr bgcolor="skyblue" align ="center">
+        <!--
+        <th>category id</th>
+        <th>category name</th>
+        <th>category description</th>
+        -->
+        <th>COVID patientid</th>
+        <th>COVID city</th>
+    </tr>
+    </thead>
+{% for covid in COVID %}
+    <tr align ="right">
+        <td>{{ covid.patientid }}</td>
+        <td>{{ covid.city }}</td>
+    </tr>
+{% endfor %}
+</table></details>
+<br>
+<hr>
+
+<h3>Query type 1</h3>
+<details><summary>Click to open Query1 table</summary>
+<table border="1" width="600px" align="center">
+    <thead>
+        <tr bgcolor="skyblue" align ="center">
+        <th>county name</th>
+        <th>average score</th>
+    </tr>
+    </thead>
+{% for query1 in Query1 %}
+    <tr align ="right">
+        <td>{{ query1.county }}</td>
+        <td>{{ query1.avgScore }}</td>
+    </tr>
+{% endfor %}
+</table></details>
+<br>
+
+<h3>Query type 2</h3>
+<details><summary>Click to open Query2 table</summary>
+<table border="1" width="600px" align="center">
+    <thead>
+        <tr bgcolor="skyblue" align ="center">
+        <!--
+        <th>category id</th>
+        <th>category name</th>
+        <th>category description</th>
+        -->
+        <th>city name</th>
+        <th>average score</th>
+    </tr>
+    </thead>
+{% for query2 in Query2 %}
+    <tr align ="right">
+        <td>{{ query2.cityName }}</td>
+        <td>{{ query2.avgScore }}</td>
+    </tr>
+{% endfor %}
+</table></details>
+<br>
+
+<h3>Query type 3</h3>
+<details><summary>Click to open Query3 table</summary>
+<table border="1" width="600px" align="center">
+    <thead>
+        <tr bgcolor="skyblue" align ="center">
+        <!--
+        <th>category id</th>
+        <th>category name</th>
+        <th>category description</th>
+        -->
+        <th>professor name</th>
+        <th>student name</th>
+    </tr>
+    </thead>
+<!--
+{% for covid in COVID %}
+    <tr align ="right">
+        <td>{{ covid.patientid }}</td>
+        <td>{{ covid.city }}</td>
+    </tr>
+{% endfor %}
+-->
+</table></details>
+<br>
+
+<h3>Query type 4</h3>
+<details><summary>Click to open Query4 table</summary>
+<table border="1" width="600px" align="center">
+    <thead>
+        <tr bgcolor="skyblue" align ="center">
+        <!--
+        <th>category id</th>
+        <th>category name</th>
+        <th>category description</th>
+        -->
+        <th>professor name</th>
+        <th>student name</th>
+    </tr>
+    </thead>
+<!--
+{% for covid in COVID %}
+    <tr align ="right">
+        <td>{{ covid.patientid }}</td>
+        <td>{{ covid.city }}</td>
+    </tr>
+{% endfor %}
+-->
+</table></details>
+<br>
+
+<h3>Query type 5</h3>
+<details><summary>Click to open Query5 table</summary>
+<table border="1" width="600px" align="center">
+    <thead>
+        <tr bgcolor="skyblue" align ="center">
+        <!--
+        <th>category id</th>
+        <th>category name</th>
+        <th>category description</th>
+        -->
+        <th>student name</th>
+        <th>city name</th>
+    </tr>
+    </thead>
+{% for query5 in Query5 %}
+    <tr align ="right">
+        <td>{{ query5.name }}</td>
+        <td>{{ query5.city1 }}</td>
+    </tr>
+{% endfor %}
+</table></details>
+<br>
+<style>
+details {
+  font: 16px "Open Sans", Calibri, sans-serif;
+  width: 600px;
+  margin: 0 auto;
+}
+
+details > summary {
+  margin: 0 auto;
+  padding: 2px 6px;
+  width: 15em;
+  background-color: #ddd;
+  border: none;
+  box-shadow: 2px 2px 2px black;
+}
+</style>
+</body>
+</html>
